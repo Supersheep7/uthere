@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
@@ -8,6 +7,9 @@ const name = 'Supersheep';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }: any) {
+
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -37,22 +39,106 @@ export default function Layout({ children, home }: any) {
         )}
       </header>
       {children}
+      <aside>
+        <AsideMenu />
+      </aside>
     </div>
   );
 }
 
 function HeaderHome(): any {
   return (
+  <div>
+    <div>
+      <h1>/Logo/</h1>
+    </div>
     <div>
       <h1>uThere?</h1>
     </div>
+    <div>
+      <nav>
+        <ul>
+          <li>Search Friends</li>
+          <li>Profile</li>
+          <li>Create</li>
+          <li>Meet (Filters)</li>
+          <li>Hamburger</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   )
 }
 
 function HeaderGeneric(): any {
   return (
+    <div className="flex header-content">
+      <div>
+        <h1>/Logo/</h1>
+      </div>
+      <div>
+        <h1>uThere?</h1>
+      </div>
+      <div>
+        <nav > 
+          <ul className="flex-center">
+            <li>Search Friends</li>
+            <li>Profile</li>
+            <li>Create</li>
+            <li>Meet (Filters)</li>
+            <li>Hamburger</li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  )
+}
+
+function AsideMenu(): any {
+  return (
     <div>
-      <h1>uThere?</h1>
+      <div id="dropdown-menus">
+        <div id="menu1">
+          <div>
+            <h1>Menu header</h1>
+          </div>
+          <div>
+            <p>Menu content (on/off)</p>
+          </div>
+        </div>
+        <div id="menu2">
+        <div>
+            <h1>Menu header</h1>
+          </div>
+          <div>
+            <p>Menu content (on/off)</p>
+          </div>
+        </div>
+        <div id="menu3">
+        <div>
+            <h1>Menu header</h1>
+          </div>
+          <div>
+            <p>Menu content (on/off)</p>
+          </div>
+        </div>
+        <div id="menu4">
+        <div>
+            <h1>Menu header</h1>
+          </div>
+          <div>
+            <p>Menu content (on/off)</p>
+          </div>
+        </div>
+        <div id="menu5">
+        <div>
+            <h1>Menu header</h1>
+          </div>
+          <div>
+            <p>Menu content (on/off)</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
