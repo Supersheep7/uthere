@@ -1,14 +1,11 @@
 import Head from 'next/head';
-import styles from './layout.module.css';
+import styles from '../styles/layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 
 const name = 'Supersheep';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }: any) {
-
-
 
   return (
     <div className={styles.container}>
@@ -48,7 +45,7 @@ export default function Layout({ children, home }: any) {
 
 function HeaderHome(): any {
   return (
-  <div>
+  <div className="flex">
     <div>
       <h1>/Logo/</h1>
     </div>
@@ -72,7 +69,7 @@ function HeaderHome(): any {
 
 function HeaderGeneric(): any {
   return (
-    <div className="flex header-content">
+    <div className="flex">
       <div>
         <h1>/Logo/</h1>
       </div>
